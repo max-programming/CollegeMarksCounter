@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="College_Marks_Counter.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center" >
+
+            <Label
+                Text="Marks Calculator!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            
+            <Entry
+                x:Name="Marks1Txt"
+                FontSize="24"
+                Placeholder="Enter Marks 1"
+                Keyboard="Numeric"
+                ClearButtonVisibility="WhileEditing"
+            />
+            <Entry
+                x:Name="Marks2Txt"
+                FontSize="24"
+                Placeholder="Enter Marks 2"
+                Keyboard="Numeric"
+                ClearButtonVisibility="WhileEditing"
+            />
+
+            <Button
+                x:Name="CalculateBtn"
+                Clicked="OnCalculateClicked"
+                Text="Calculate"
+                FontSize="24"
+                SemanticProperties.Hint="Calclulates marks needed to pass the exam"
+                HorizontalOptions="Center" />
+            
+                <Label FontSize="24" 
+                   x:Name="OutputLabel"
+                   FontAttributes="Bold" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
