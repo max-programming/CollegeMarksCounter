@@ -19,15 +19,15 @@ public partial class MainPage : ContentPage
 
 	private void OnCalculateClicked(object sender, EventArgs e)
 	{
-        double marks1 = double.Parse(Marks1Txt.Text);
-        double marks2 = double.Parse(Marks2Txt.Text);
+		double marks1 = double.Parse(Marks1Txt.Text);
+		double marks2 = double.Parse(Marks2Txt.Text);
 
 		double passingMarks = Math.Abs(((marks1 + marks2) / 2.5) - 40);
 		string displayPassingMarks = string.Format("{0:0.00}", passingMarks);
 
 		string emotion = GetEmotion(passingMarks);
 
-        OutputLabel.Text = $"You have to score {displayPassingMarks} to pass {emotion}";
+		OutputLabel.Text = $"You have to score {displayPassingMarks} to pass {emotion}";
 	}
 }
 
